@@ -35,7 +35,7 @@ gsap.to(img2, {
 document.querySelectorAll(".section-content").forEach((section) => {
   const info = section.querySelector(".section-content__info");
   const image = section.querySelector(".section-content__image-img");
-  rallax;
+  
   gsap.to(image, {
     scrollTrigger: {
       trigger: section,
