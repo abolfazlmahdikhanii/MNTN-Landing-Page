@@ -1,4 +1,3 @@
-// script.js
 gsap.registerPlugin(ScrollTrigger);
 
 // Select the images
@@ -23,9 +22,7 @@ gsap.to(img1, {
 // Parallax effect for image 2
 gsap.to(img2, {
   yPercent: -20,
-  // rotation: -1,
   scale: 1.1,
-
   ease: "none",
   scrollTrigger: {
     trigger: "#scene",
@@ -35,40 +32,33 @@ gsap.to(img2, {
   },
 });
 
-// Alternate animations for sections
 document.querySelectorAll(".section-content").forEach((section) => {
-    const info = section.querySelector(".section-content__info");
-    const image = section.querySelector(".section-content__image-img");
-  
-    // Animate image with rotation and parallax
-    gsap.to(image, {
-      scrollTrigger: {
-        trigger: section,
-        start: "top 85%",
-        end: "bottom top",
-        scrub: 1,
-      },
-      y: -50,
-      rotate: 5, // Slight rotation
-      scale: 1.05, // Subtle zoom
-    });
-  
-    // Animate text with a blur effect
-    gsap.from(info, {
-      scrollTrigger: {
-        trigger: section,
-        start: "top 90%",
-        toggleActions: "play none none reverse",
-        
-      },
-      opacity: 0,
-      y: 50,
-      duration: 1.5,
-      ease: "power2.out",
-      filter: "blur(10px)", // Start blurred
-      clearProps: "filter", // Reset blur after animation
-    });
+  const info = section.querySelector(".section-content__info");
+  const image = section.querySelector(".section-content__image-img");
+  rallax;
+  gsap.to(image, {
+    scrollTrigger: {
+      trigger: section,
+      start: "top 85%",
+      end: "bottom top",
+      scrub: 1,
+    },
+    y: -50,
+    rotate: 5,
+    scale: 1.05,
   });
-  
 
-// Content text fades in and floats in layers as user scrolls
+  gsap.from(info, {
+    scrollTrigger: {
+      trigger: section,
+      start: "top 90%",
+      toggleActions: "play none none reverse",
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1.5,
+    ease: "power2.out",
+    filter: "blur(10px)",
+    clearProps: "filter",
+  });
+});
