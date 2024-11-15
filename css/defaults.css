@@ -1,0 +1,38 @@
+/* Start Defualt Style */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+body {
+  /* line-height: 1.6; */
+  font-size: 1.6rem;
+  font-family: var(--primary-font), "sans-serif";
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+a:hover {
+  color: inherit;
+}
+.container {
+  max-width: 1280px;
+}
+
+
+/* End Defualt Style */
